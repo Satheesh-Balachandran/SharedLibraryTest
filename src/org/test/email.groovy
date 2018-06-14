@@ -2,6 +2,7 @@
 package org.test
 
 def test() {
+	def NOTIFYUSER
 	echo "***** Inside me *****"
 	 wrap([$class: 'BuildUser']) {
 		 if(env.BUILD_USER_EMAIL != null) {
