@@ -5,11 +5,13 @@ def test() {
 	echo "***** Inside me *****"
 	 wrap([$class: 'BuildUser']) {
 		 if(BUILD_USER_EMAIL != null) {
+			 echo "****Manual Trigger******"
 			NOTIFYUSER = "${BUILD_USER_EMAIL}"
 		 }
     	}
 	
 	if(NOTIFYUSER == null) {
+		echo "****GitHub Commit****"
 		NOTIFYUSER = sh (
       			script: 'git --no-pager show -s --format=\'%ae\'',
    			returnStdout: true
