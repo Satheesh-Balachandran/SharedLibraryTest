@@ -2,8 +2,7 @@
 package org.test
 
 def test() {
-	def NOTIFYUSER
-	
+	echo "***** Inside me *****"
 	 wrap([$class: 'BuildUser']) {
 		NOTIFYUSER = "${BUILD_USER_EMAIL}"
     	}

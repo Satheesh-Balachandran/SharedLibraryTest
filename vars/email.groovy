@@ -6,7 +6,7 @@ def call(body) {
     body.delegate = config
     body()
 
-	def email = new org.test.Email()
+	def email = new org.test.email()
 	email.test()
 
 }
