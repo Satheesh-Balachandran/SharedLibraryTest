@@ -13,7 +13,7 @@ def test() {
 	
 	if(NOTIFYUSER == null) {
 		echo "****GitHub Commit****"
-		NOTIFYUSER = sh (
+		NOTIFYUSER = bat (
       			script: 'git --no-pager show -s --format=\'%ae\'',
    			returnStdout: true
 		).trim()
