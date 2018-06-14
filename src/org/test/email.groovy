@@ -4,7 +4,9 @@ package org.test
 def test() {
 	echo "***** Inside me *****"
 	 wrap([$class: 'BuildUser']) {
-		NOTIFYUSER = "${BUILD_USER_EMAIL}"
+		 if("${BUILD_USER_EMAIL}" != null {
+			NOTIFYUSER = "${BUILD_USER_EMAIL}"
+		 }
     	}
 	
 	if(NOTIFYUSER == null) {
